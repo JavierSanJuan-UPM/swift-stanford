@@ -64,6 +64,7 @@ class ViewController: UIViewController {
         if let operation = sender.currentTitle {
             if let result = brain.performOperation(operation) {
                 displayValue = result
+                display.text = display.text! + "="
             } else {
                 displayValue = 0
             }
@@ -82,8 +83,17 @@ class ViewController: UIViewController {
     
     var displayValue: Double? {
         get {
-            if let valueNumber = NSNumberFormatter().numberFromString(display.text!) {
-                return valueNumber.doubleValue
+            if let displayText = display.text {
+                var textToConvert = displayText
+                if displayText[advance(displayText.startIndex, count(displayText)-1)] == "=" {
+                    textToConvert = dropLast(textToConvert)
+                }
+                if let valueNumber = NSNumberFormatter().numberFromString(textToConvert) {
+                    return valueNumber.doubleValue
+                } else {
+                    println("Cannot get double from: \(displayText)")
+                    return nil
+                }
             } else {
                 return nil
             }
@@ -102,6 +112,18 @@ class ViewController: UIViewController {
         history.text = " "
         isInMiddleOfTyping = false
         brain.clearStack()
+    }
+    
+    @IBAction func changeSign(sender: UIButton) {
+        if isInMiddleOfTyping {
+            if let theValue = displayValue {
+                displayValue = theValue
+            } else {
+                println("Cannot change the sign of nil")
+            }
+        } else {
+            operate(sender)
+        }
     }
     
     func appendHistory(value: String) {
