@@ -123,4 +123,16 @@ class CalculatorBrain {
     func clearStack() {
         opStack.removeAll(keepCapacity: false);
     }
+    
+    var description: String {
+        var stackCopy = opStack
+        while !stackCopy.isEmpty {
+            let op = stackCopy.removeLast()
+            /*switch op {
+            case .UnaryOperation(_, let operation):
+                
+            }*/
+        }
+        return ""
+    }
 }
