@@ -64,9 +64,10 @@ class ViewController: UIViewController {
         if let operation = sender.currentTitle {
             if let result = brain.performOperation(operation) {
                 displayValue = result
-                display.text = display.text! + "="
+                history.text = brain.description + "="
             } else {
-                displayValue = 0
+                displayValue = nil
+                history.text = brain.description
             }
         }
     }
@@ -78,17 +79,14 @@ class ViewController: UIViewController {
         } else {
             displayValue = 0
         }
-        appendHistory("\(displayValue!)")
+        //appendHistory("\(displayValue!)")
+        history.text = brain.description
     }
     
     var displayValue: Double? {
         get {
             if let displayText = display.text {
-                var textToConvert = displayText
-                if displayText[advance(displayText.startIndex, count(displayText)-1)] == "=" {
-                    textToConvert = dropLast(textToConvert)
-                }
-                if let valueNumber = NSNumberFormatter().numberFromString(textToConvert) {
+                if let valueNumber = NSNumberFormatter().numberFromString(displayText) {
                     return valueNumber.doubleValue
                 } else {
                     println("Cannot get double from: \(displayText)")
@@ -102,7 +100,7 @@ class ViewController: UIViewController {
             if newValue != nil {
                 display.text = "\(newValue!)"
             } else {
-                display.text = "0"
+                display.text = " "
             }
         }
     }
@@ -112,6 +110,7 @@ class ViewController: UIViewController {
         history.text = " "
         isInMiddleOfTyping = false
         brain.clearStack()
+        brain.variableValues["M"] = nil
     }
     
     @IBAction func changeSign(sender: UIButton) {
@@ -126,7 +125,34 @@ class ViewController: UIViewController {
         }
     }
     
-    func appendHistory(value: String) {
-        history.text = history.text! + (history.text == " " ? "" : ", ") + value
+    @IBAction func setM() {
+        if let value = displayValue {
+            brain.variableValues["M"] = value
+            isInMiddleOfTyping = false
+        }
+        displayValue = brain.evaluate()
+        history.text = brain.description
     }
+    
+    @IBAction func getM() {
+        if isInMiddleOfTyping { enter() }
+        if let result = brain.pushOperand("M") {
+            displayValue = result
+        }
+        history.text = brain.description
+    }
+    
+    /*func appendHistory(value: String) {
+        // Store trimmed string
+        var oldText = history.text?.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet()) ?? ""
+        
+        // Remove trailing "=" if it exists
+        if count(oldText) > 0 && oldText[advance(oldText.startIndex, count(oldText)-1)] == "=" { oldText = dropLast(oldText) }
+        
+        // Append comma if not empty
+        if count(oldText) > 0 { oldText += ", " }
+        
+        // Append value
+        history.text = oldText + value
+    }*/
 }

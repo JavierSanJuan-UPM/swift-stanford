@@ -19,21 +19,29 @@ class CalculatorBrain {
             get {
                 switch self {
                 case .Operand(let operand):
-                    return "\(operand)"
+                    if "\(operand)" == "\(M_PI)" {
+                        return "π"
+                    } else {
+                        if operand - Double(Int(operand)) > 0 {
+                            return "\(operand)"
+                        } else {
+                            return "\(Int(operand))"
+                        }
+                    }
                 case .UnaryOperation(let symbol, _):
                     return symbol
                 case .BinaryOperation(let symbol, _):
                     return symbol
-                case .Variable(let symbol, let fun):
-                    return symbol + "\(fun())"
+                case .Variable(let symbol, _):
+                    return symbol
                 }
             }
         }
     }
     
     private var opStack = [Op]()
-    private var variableValues = [String: Double]()
     private var knownOps = [String:Op]()
+    var variableValues = [String: Double]()
     
     // Guaranteed to be a PropertyList
     var program: AnyObject {
@@ -125,14 +133,50 @@ class CalculatorBrain {
     }
     
     var description: String {
-        var stackCopy = opStack
-        while !stackCopy.isEmpty {
-            let op = stackCopy.removeLast()
-            /*switch op {
-            case .UnaryOperation(_, let operation):
-                
-            }*/
+        println("stack to describe: \(opStack)")
+        var desc = ""
+        var ops = opStack
+        while !ops.isEmpty {
+            let result = describe(ops)
+            if let string = result.string {
+                let oldDesc = desc
+                //if count(desc) > 0 { desc += "," }
+                desc = string
+                if count(oldDesc) > 0 { desc += "," + oldDesc }
+                ops = result.remainingOps
+            }
         }
-        return ""
+        return desc
+    }
+    
+    private func describe(ops: [Op]) -> (string: String?, remainingOps: [Op]) {
+        if !ops.isEmpty {
+            var remainingOps = ops
+            let op = remainingOps.removeLast()
+            switch op {
+            case .UnaryOperation(let symbol, _):
+                let operandDesc = describe(remainingOps)
+                if let string = operandDesc.string {
+                    return (symbol + "(" + string + ")", operandDesc.remainingOps)
+                }
+            case .BinaryOperation(let symbol, _):
+                let operand1Desc = describe(remainingOps)
+                if let string1 = operand1Desc.string {
+                    let differenceInStackPost = count(remainingOps) - count(operand1Desc.remainingOps)
+                    let operand2Desc = describe(operand1Desc.remainingOps)
+                    if let string2 = operand2Desc.string {
+                        let differenceInStackPre = count(operand1Desc.remainingOps) - count(operand2Desc.remainingOps)
+                        var pre = string2
+                        var post = string1
+                        if differenceInStackPre > 1 { pre = "(" + pre + ")" }
+                        if differenceInStackPost > 1 { post = "(" + post + ")" }
+                        return (pre + symbol + post, operand2Desc.remainingOps)
+                    }
+                }
+            default:
+                return (op.description, remainingOps)
+            }
+        }
+        return ("?", ops)
     }
 }
