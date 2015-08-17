@@ -8,12 +8,36 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class CalculatorViewController: UIViewController {
 
     @IBOutlet weak var display: UILabel!
     @IBOutlet weak var history: UILabel!
-    var isInMiddleOfTyping = false
-    var brain = CalculatorBrain()
+    private var isInMiddleOfTyping = false
+    private var brain = CalculatorBrain()
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let navVC = segue.destinationViewController as? UINavigationController {
+            if let graphVC = navVC.visibleViewController as? GraphViewController {
+                let opDescriptions = split(brain.description) { $0 == "," }
+                if opDescriptions.count > 0 {
+                    graphVC.title = "\(opDescriptions[opDescriptions.count-1])"
+                }
+                graphVC.calcVC = self
+            }
+        }
+    }
+    
+    func canEvaluate() -> Bool {
+        return brain.hasEmptyStack()
+    }
+    
+    func evaluateWithMValue(m: Double) -> Double? {
+        let prevM = brain.variableValues["M"]
+        brain.variableValues["M"] = m
+        let result = brain.evaluate()
+        brain.variableValues["M"] = prevM
+        return result
+    }
     
     @IBAction func appendDigit(sender: UIButton) {
         // Handle π as a special case

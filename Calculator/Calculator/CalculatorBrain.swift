@@ -56,6 +56,8 @@ class CalculatorBrain {
                         newOpStack.append(op)
                     } else if let operand = NSNumberFormatter().numberFromString(opSymbol)?.doubleValue {
                         newOpStack.append(.Operand(operand))
+                    } else {
+                        println("ERROR: Could not add opSymbol to program")
                     }
                 }
                 opStack = newOpStack
@@ -107,7 +109,7 @@ class CalculatorBrain {
     
     func evaluate() -> Double? {
         let (result, remainder) = evaluate(opStack)
-        println("\(opStack) = \(result) with \(remainder) left over");
+        //println("\(opStack) = \(result) with \(remainder) left over");
         return result
     }
     
@@ -132,8 +134,11 @@ class CalculatorBrain {
         opStack.removeAll(keepCapacity: false);
     }
     
+    func hasEmptyStack() -> Bool {
+        return opStack.count == 0
+    }
+    
     var description: String {
-        println("stack to describe: \(opStack)")
         var desc = ""
         var ops = opStack
         while !ops.isEmpty {
