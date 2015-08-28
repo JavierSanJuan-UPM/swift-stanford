@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		59CC20041B90966300A4F5C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CC20031B90966300A4F5C9 /* AppDelegate.swift */; };
-		59CC20061B90966300A4F5C9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CC20051B90966300A4F5C9 /* ViewController.swift */; };
+		59CC20061B90966300A4F5C9 /* GPXViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CC20051B90966300A4F5C9 /* GPXViewController.swift */; };
 		59CC20091B90966300A4F5C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59CC20071B90966300A4F5C9 /* Main.storyboard */; };
 		59CC200B1B90966300A4F5C9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59CC200A1B90966300A4F5C9 /* Images.xcassets */; };
 		59CC200E1B90966300A4F5C9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59CC200C1B90966300A4F5C9 /* LaunchScreen.xib */; };
 		59CC201A1B90966300A4F5C9 /* TraxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CC20191B90966300A4F5C9 /* TraxTests.swift */; };
 		59CC20241B90B29300A4F5C9 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59CC20231B90B29300A4F5C9 /* Default-568h@2x.png */; };
+		59E3B2271B90D7540095A12A /* GPX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E3B2261B90D7540095A12A /* GPX.swift */; };
+		59E3B2291B90E4FB0095A12A /* MKGPX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E3B2281B90E4FB0095A12A /* MKGPX.swift */; };
+		59E3B22B1B90ED2B0095A12A /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E3B22A1B90ED2B0095A12A /* ImageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,7 +33,7 @@
 		59CC1FFE1B90966300A4F5C9 /* Trax.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trax.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59CC20021B90966300A4F5C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		59CC20031B90966300A4F5C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		59CC20051B90966300A4F5C9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		59CC20051B90966300A4F5C9 /* GPXViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPXViewController.swift; sourceTree = "<group>"; };
 		59CC20081B90966300A4F5C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		59CC200A1B90966300A4F5C9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		59CC200D1B90966300A4F5C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -38,6 +41,9 @@
 		59CC20181B90966300A4F5C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		59CC20191B90966300A4F5C9 /* TraxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraxTests.swift; sourceTree = "<group>"; };
 		59CC20231B90B29300A4F5C9 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		59E3B2261B90D7540095A12A /* GPX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPX.swift; sourceTree = "<group>"; };
+		59E3B2281B90E4FB0095A12A /* MKGPX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKGPX.swift; sourceTree = "<group>"; };
+		59E3B22A1B90ED2B0095A12A /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +87,9 @@
 			isa = PBXGroup;
 			children = (
 				59CC20031B90966300A4F5C9 /* AppDelegate.swift */,
-				59CC20051B90966300A4F5C9 /* ViewController.swift */,
+				59CC20051B90966300A4F5C9 /* GPXViewController.swift */,
+				59E3B2261B90D7540095A12A /* GPX.swift */,
+				59E3B2281B90E4FB0095A12A /* MKGPX.swift */,
 				59CC20071B90966300A4F5C9 /* Main.storyboard */,
 				59CC20011B90966300A4F5C9 /* Supporting Files */,
 			);
@@ -91,6 +99,7 @@
 		59CC20011B90966300A4F5C9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				59E3B22A1B90ED2B0095A12A /* ImageViewController.swift */,
 				59CC200A1B90966300A4F5C9 /* Images.xcassets */,
 				59CC200C1B90966300A4F5C9 /* LaunchScreen.xib */,
 				59CC20021B90966300A4F5C9 /* Info.plist */,
@@ -216,8 +225,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				59CC20061B90966300A4F5C9 /* ViewController.swift in Sources */,
+				59CC20061B90966300A4F5C9 /* GPXViewController.swift in Sources */,
+				59E3B2291B90E4FB0095A12A /* MKGPX.swift in Sources */,
+				59E3B22B1B90ED2B0095A12A /* ImageViewController.swift in Sources */,
 				59CC20041B90966300A4F5C9 /* AppDelegate.swift in Sources */,
+				59E3B2271B90D7540095A12A /* GPX.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,6 +427,7 @@
 				59CC201F1B90966300A4F5C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		59CC20201B90966300A4F5C9 /* Build configuration list for PBXNativeTarget "TraxTests" */ = {
 			isa = XCConfigurationList;
@@ -423,6 +436,7 @@
 				59CC20221B90966300A4F5C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
