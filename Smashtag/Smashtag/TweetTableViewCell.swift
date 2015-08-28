@@ -26,19 +26,41 @@ class TweetTableViewCell: UITableViewCell {
         //tweetCreatedLabel?.text = nil
         
         if let tweet = self.tweet {
-            tweetTextLabel.text = tweet.text
-            if tweetTextLabel.text != nil {
-                for _ in tweet.media {
-                    tweetTextLabel.text! += " 📷"
-                }
+            var tweetText = tweet.text
+            for _ in tweet.media {
+                tweetText += " 📷"
             }
             
+            // Set text attributes
+            let attributedString = NSMutableAttributedString(string: tweetText)
+            for hashtagKeyword in tweet.hashtags {
+                attributedString.addAttribute(NSForegroundColorAttributeName, value: UIColor.blueColor(), range: hashtagKeyword.nsrange)
+            }
+            for urlKeyword in tweet.urls {
+                attributedString.addAttribute(NSForegroundColorAttributeName, value: UIColor.brownColor(), range: urlKeyword.nsrange)
+            }
+            for mentionKeyword in tweet.userMentions {
+                attributedString.addAttribute(NSForegroundColorAttributeName, value: UIColor.orangeColor(), range: mentionKeyword.nsrange)
+            }
+            
+            // Set tweet text
+            tweetTextLabel.attributedText = attributedString
+            
+            // Set tweet user
             tweetScreenNameLabel?.text = "\(tweet.user)"
             
+            // Set profile image
             self.tweetProfileImageView?.image = nil
             if let profileImageURL = tweet.user.profileImageURL {
-                if let imageData = NSData(contentsOfURL: profileImageURL) { // blocks main thread!
-                    self.tweetProfileImageView?.image = UIImage(data: imageData)
+                let qos = Int(QOS_CLASS_USER_INITIATED.value)
+                dispatch_async(dispatch_get_global_queue(qos, 0)) {
+                    if let imageData = NSData(contentsOfURL: profileImageURL) {
+                        dispatch_async(dispatch_get_main_queue()) {
+                            if self.tweet?.user.profileImageURL != nil && profileImageURL == self.tweet!.user.profileImageURL! {
+                                self.tweetProfileImageView?.image = UIImage(data: imageData)
+                            }
+                        }
+                    }
                 }
             }
             
