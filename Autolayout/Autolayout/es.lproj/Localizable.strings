@@ -1,0 +1,18 @@
+/* Message in an alert when the user types in an incorrect username or password */
+"Invalid username of password" = "Nombre de usuario o contraseña incorrectos";
+
+/* Reports the number of days and time when the user last logged in */
+"Last Login %@ days ago at %@" = "Último acceso hace %1$@ días a las %2$@";
+
+/* Title of alert when user types in an incorrect username or password */
+"Login Error" = "Error de Acceso";
+
+/* Prompt for the user's password when it is not secure */
+"Password" = "Contraseña";
+
+/* Prompt for the user's password when it is secure */
+"Secure Password" = "Contraseña Oculta";
+
+/* The only button available in an alert presented when the user types incorrect username or password */
+"Try Again" = "Intentar de Nuevo";
+

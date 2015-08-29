@@ -13,6 +13,15 @@ struct User {
     let company: String
     let login: String
     let password: String
+    var lastLogin: NSDate?
+    
+    init(name: String, company: String, login: String, password: String) {
+        self.name = name
+        self.company = company
+        self.login = login
+        self.password = password
+        self.lastLogin = nil
+    }
     
     static func login(login: String, password: String) -> User? {
         if let user = database[login] {

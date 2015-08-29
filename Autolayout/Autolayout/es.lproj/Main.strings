@@ -1,0 +1,21 @@
+/* Class = "UIButton"; normalTitle = "Login"; ObjectID = "98A-5X-BiV"; */
+"98A-5X-BiV.normalTitle" = "Acceder";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "IBG-TG-XCg"; */
+"IBG-TG-XCg.text" = "Nombre";
+
+/* Class = "UILabel"; text = "Password"; ObjectID = "cVo-as-34N"; */
+"cVo-as-34N.text" = "Contraseña";
+
+/* Class = "UILabel"; text = "Username"; ObjectID = "fo5-fH-S5F"; */
+"fo5-fH-S5F.text" = "Nombre Usuario";
+
+/* Class = "UILabel"; text = "Company"; ObjectID = "izJ-1Y-CON"; */
+"izJ-1Y-CON.text" = "Empresa";
+
+/* Class = "UILabel"; text = "Last Login"; ObjectID = "xPG-k9-zHt"; */
+"xPG-k9-zHt.text" = "Último Acceso";
+
+/* Class = "UIButton"; normalTitle = "Change Security"; ObjectID = "z7i-7V-RpA"; */
+"z7i-7V-RpA.normalTitle" = "Cambiar Seguridad";
+

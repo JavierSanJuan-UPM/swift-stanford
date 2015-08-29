@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
@@ -59,22 +59,28 @@
                                 <rect key="frame" x="409" y="104" width="175" height="30"/>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="700" image="javi" translatesAutoresizingMaskIntoConstraints="NO" id="IYb-6g-411">
-                                <rect key="frame" x="16" y="357" width="160" height="223"/>
+                                <rect key="frame" x="16" y="171" width="160" height="409"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="800" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IBG-TG-XCg">
-                                <rect key="frame" x="184" y="448" width="46" height="21"/>
+                                <rect key="frame" x="184" y="355" width="46" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="800" text="Company" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="izJ-1Y-CON">
-                                <rect key="frame" x="184" y="477" width="75" height="21"/>
+                                <rect key="frame" x="184" y="384" width="75" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cVo-as-34N">
                                 <rect key="frame" x="16" y="69" width="79" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Last Login" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xPG-k9-zHt">
+                                <rect key="frame" x="16" y="142" width="81" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -87,6 +93,7 @@
                             <constraint firstItem="izJ-1Y-CON" firstAttribute="top" secondItem="IBG-TG-XCg" secondAttribute="bottom" constant="8" id="2sw-br-vj6">
                                 <variation key="heightClass=regular" constant="8" symbolic="YES"/>
                             </constraint>
+                            <constraint firstItem="xPG-k9-zHt" firstAttribute="top" secondItem="T3N-D5-h8U" secondAttribute="bottom" constant="8" id="4Wk-67-Tse"/>
                             <constraint firstItem="izJ-1Y-CON" firstAttribute="leading" secondItem="IBG-TG-XCg" secondAttribute="leading" id="4fg-Jy-paP"/>
                             <constraint firstItem="izJ-1Y-CON" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="5Ua-ck-gHC"/>
                             <constraint firstItem="hmK-mW-5DF" firstAttribute="leading" secondItem="98A-5X-BiV" secondAttribute="trailing" constant="8" symbolic="YES" id="95j-Y3-r5g"/>
@@ -104,9 +111,11 @@
                             <constraint firstItem="izJ-1Y-CON" firstAttribute="top" secondItem="IBG-TG-XCg" secondAttribute="bottom" constant="8" symbolic="YES" id="JFN-pw-QRT"/>
                             <constraint firstItem="z7i-7V-RpA" firstAttribute="leading" secondItem="T3N-D5-h8U" secondAttribute="trailing" constant="8" symbolic="YES" id="MAg-40-ymP"/>
                             <constraint firstItem="6fW-GU-rvs" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="RpW-k9-cN7"/>
+                            <constraint firstItem="xPG-k9-zHt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="SEu-1C-Mqm"/>
                             <constraint firstItem="IBG-TG-XCg" firstAttribute="leading" secondItem="IYb-6g-411" secondAttribute="trailing" constant="8" symbolic="YES" id="SiL-sE-WcU"/>
                             <constraint firstItem="98A-5X-BiV" firstAttribute="leading" secondItem="z7i-7V-RpA" secondAttribute="trailing" constant="50" id="Tth-XD-DFW"/>
                             <constraint firstItem="z7i-7V-RpA" firstAttribute="bottom" secondItem="T3N-D5-h8U" secondAttribute="bottom" id="U2V-YD-Q0z"/>
+                            <constraint firstItem="IYb-6g-411" firstAttribute="top" secondItem="xPG-k9-zHt" secondAttribute="bottom" constant="8" symbolic="YES" id="V5U-Wz-COs"/>
                             <constraint firstItem="fo5-fH-S5F" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="V7d-YT-ZbV"/>
                             <constraint firstItem="hmK-mW-5DF" firstAttribute="bottom" secondItem="98A-5X-BiV" secondAttribute="bottom" id="WMb-XC-du9"/>
                             <constraint firstItem="IBG-TG-XCg" firstAttribute="bottom" secondItem="IYb-6g-411" secondAttribute="centerY" id="XOu-KM-WuC"/>
@@ -139,6 +148,7 @@
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="DbL-wj-a8s"/>
+                                <exclude reference="ZBr-Rr-3yk"/>
                                 <exclude reference="xxv-TZ-mmB"/>
                                 <exclude reference="rbg-Xs-waT"/>
                                 <exclude reference="xFI-FI-miV"/>
@@ -173,6 +183,7 @@
                     <connections>
                         <outlet property="companyLabel" destination="izJ-1Y-CON" id="zhp-by-g4Z"/>
                         <outlet property="imageView" destination="IYb-6g-411" id="Yf4-F4-HYh"/>
+                        <outlet property="lastLoginLabel" destination="xPG-k9-zHt" id="ej4-2H-e2r"/>
                         <outlet property="loginField" destination="6fW-GU-rvs" id="aEo-yk-LMb"/>
                         <outlet property="nameLabel" destination="IBG-TG-XCg" id="3Yw-iN-h9j"/>
                         <outlet property="passwordField" destination="oSt-6y-Svf" id="pUL-Bn-cXr"/>

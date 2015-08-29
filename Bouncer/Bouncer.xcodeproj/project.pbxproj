@@ -14,6 +14,7 @@
 		599D1D2A1B90CCC20058430D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 599D1D281B90CCC20058430D /* LaunchScreen.xib */; };
 		599D1D361B90CCC20058430D /* BouncerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599D1D351B90CCC20058430D /* BouncerTests.swift */; };
 		599D1D401B90CCF90058430D /* BouncerBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599D1D3F1B90CCF90058430D /* BouncerBehavior.swift */; };
+		59CF349D1B91F1FC0085DCF0 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 59CF349C1B91F1FC0085DCF0 /* Settings.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		599D1D341B90CCC20058430D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		599D1D351B90CCC20058430D /* BouncerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BouncerTests.swift; sourceTree = "<group>"; };
 		599D1D3F1B90CCF90058430D /* BouncerBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BouncerBehavior.swift; sourceTree = "<group>"; };
+		59CF349C1B91F1FC0085DCF0 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,8 +85,7 @@
 				599D1D211B90CCC20058430D /* ViewController.swift */,
 				599D1D3F1B90CCF90058430D /* BouncerBehavior.swift */,
 				599D1D231B90CCC20058430D /* Main.storyboard */,
-				599D1D261B90CCC20058430D /* Images.xcassets */,
-				599D1D281B90CCC20058430D /* LaunchScreen.xib */,
+				59CF349C1B91F1FC0085DCF0 /* Settings.bundle */,
 				599D1D1D1B90CCC20058430D /* Supporting Files */,
 			);
 			path = Bouncer;
@@ -93,6 +94,8 @@
 		599D1D1D1B90CCC20058430D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				599D1D261B90CCC20058430D /* Images.xcassets */,
+				599D1D281B90CCC20058430D /* LaunchScreen.xib */,
 				599D1D1E1B90CCC20058430D /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -195,6 +198,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59CF349D1B91F1FC0085DCF0 /* Settings.bundle in Resources */,
 				599D1D251B90CCC20058430D /* Main.storyboard in Resources */,
 				599D1D2A1B90CCC20058430D /* LaunchScreen.xib in Resources */,
 				599D1D271B90CCC20058430D /* Images.xcassets in Resources */,
@@ -415,6 +419,7 @@
 				599D1D3B1B90CCC20058430D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		599D1D3C1B90CCC20058430D /* Build configuration list for PBXNativeTarget "BouncerTests" */ = {
 			isa = XCConfigurationList;
@@ -423,6 +428,7 @@
 				599D1D3E1B90CCC20058430D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
