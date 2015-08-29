@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd">
+  <file original="Autolayout/Base.lproj/LaunchScreen.xib" source-language="en" datatype="plaintext" target-language="zh-Hans">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="6.4" build-num="6E35b"/>
+    </header>
+    <body>
+      <trans-unit id="8ie-xW-0ye.text">
+        <source>  Copyright (c) 2015 Pulse. All rights reserved.</source>
+        <target>  Copyright (c) 2015 Pulse. All rights reserved.</target>
+        <note>Class = "UILabel"; text = "  Copyright (c) 2015 Pulse. All rights reserved."; ObjectID = "8ie-xW-0ye";</note>
+      </trans-unit>
+      <trans-unit id="kId-c2-rCX.text">
+        <source>Autolayout</source>
+        <target>Autolayout</target>
+        <note>Class = "UILabel"; text = "Autolayout"; ObjectID = "kId-c2-rCX";</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="Autolayout/Base.lproj/Main.storyboard" source-language="en" datatype="plaintext" target-language="zh-Hans">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="6.4" build-num="6E35b"/>
+    </header>
+    <body>
+      <trans-unit id="98A-5X-BiV.normalTitle">
+        <source>Login</source>
+        <target>Login</target>
+        <note>Class = "UIButton"; normalTitle = "Login"; ObjectID = "98A-5X-BiV";</note>
+      </trans-unit>
+      <trans-unit id="IBG-TG-XCg.text">
+        <source>Name</source>
+        <target>Name</target>
+        <note>Class = "UILabel"; text = "Name"; ObjectID = "IBG-TG-XCg";</note>
+      </trans-unit>
+      <trans-unit id="cVo-as-34N.text">
+        <source>Password</source>
+        <target>Password</target>
+        <note>Class = "UILabel"; text = "Password"; ObjectID = "cVo-as-34N";</note>
+      </trans-unit>
+      <trans-unit id="fo5-fH-S5F.text">
+        <source>Username</source>
+        <target>Username</target>
+        <note>Class = "UILabel"; text = "Username"; ObjectID = "fo5-fH-S5F";</note>
+      </trans-unit>
+      <trans-unit id="izJ-1Y-CON.text">
+        <source>Company</source>
+        <target>Company</target>
+        <note>Class = "UILabel"; text = "Company"; ObjectID = "izJ-1Y-CON";</note>
+      </trans-unit>
+      <trans-unit id="xPG-k9-zHt.text">
+        <source>Last Login</source>
+        <target>Last Login</target>
+        <note>Class = "UILabel"; text = "Last Login"; ObjectID = "xPG-k9-zHt";</note>
+      </trans-unit>
+      <trans-unit id="z7i-7V-RpA.normalTitle">
+        <source>Change Security</source>
+        <target>Change Security</target>
+        <note>Class = "UIButton"; normalTitle = "Change Security"; ObjectID = "z7i-7V-RpA";</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="Autolayout/Info.plist" source-language="en" datatype="plaintext" target-language="zh-Hans">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="6.4" build-num="6E35b"/>
+    </header>
+    <body>
+      <trans-unit id="CFBundleName">
+        <source>$(PRODUCT_NAME)</source>
+      </trans-unit>
+      <trans-unit id="CFBundleShortVersionString">
+        <source>1.0</source>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="Autolayout/Localizable.strings" source-language="en" datatype="plaintext" target-language="zh-Hans">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="6.4" build-num="6E35b"/>
+    </header>
+    <body>
+      <trans-unit id="Invalid username of password">
+        <source>Invalid username of password</source>
+        <note>Message in an alert when the user types in an incorrect username or password</note>
+      </trans-unit>
+      <trans-unit id="Last Login %@ days ago at %@">
+        <source>Last Login %1$@ days ago at %2$@</source>
+        <note>Reports the number of days and time when the user last logged in</note>
+      </trans-unit>
+      <trans-unit id="Login Error">
+        <source>Login Error</source>
+        <note>Title of alert when user types in an incorrect username or password</note>
+      </trans-unit>
+      <trans-unit id="Password">
+        <source>Password</source>
+        <note>Prompt for the user's password when it is not secure</note>
+      </trans-unit>
+      <trans-unit id="Secure Password">
+        <source>Secure Password</source>
+        <note>Prompt for the user's password when it is secure</note>
+      </trans-unit>
+      <trans-unit id="Try Again">
+        <source>Try Again</source>
+        <note>The only button available in an alert presented when the user types incorrect username or password</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="AutolayoutTests/Info.plist" source-language="en" datatype="plaintext" target-language="zh-Hans">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="6.4" build-num="6E35b"/>
+    </header>
+    <body>
+      <trans-unit id="CFBundleName">
+        <source>$(PRODUCT_NAME)</source>
+      </trans-unit>
+      <trans-unit id="CFBundleShortVersionString">
+        <source>1.0</source>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
