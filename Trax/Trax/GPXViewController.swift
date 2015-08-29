@@ -57,6 +57,7 @@ class GPXViewController: UIViewController, MKMapViewDelegate, UIPopoverPresentat
             let coordinate = mapView.convertPoint(sender.locationInView(mapView), toCoordinateFromView: mapView)
             let waypoint = EditableWaypoint(latitude: coordinate.latitude, longitude: coordinate.longitude)
             waypoint.name = "Dropped"
+            waypoint.links.append(GPX.Link(href: "http://cs193p.stanford.edu/Images/Panorama.jpg"))
             mapView.addAnnotation(waypoint)
         }
     }
@@ -112,7 +113,9 @@ class GPXViewController: UIViewController, MKMapViewDelegate, UIPopoverPresentat
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == Constants.ShowImageSegue {
             if let waypoint = (sender as? MKAnnotationView)?.annotation as? GPX.Waypoint {
-                if let imageVC = segue.destinationViewController.contentViewController as? ImageViewController {
+                if let waypointIVC = segue.destinationViewController.contentViewController as? WaypointImageViewController {
+                    waypointIVC.waypoint = waypoint
+                } else if let imageVC = segue.destinationViewController.contentViewController as? ImageViewController {
                     imageVC.imageURL = waypoint.imageURL
                     imageVC.title = waypoint.name
                 }
